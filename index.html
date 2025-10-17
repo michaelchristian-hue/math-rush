@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Rush+</title>
+
+  <!-- Font & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 🎮 Game Container -->
+  <div class="game-container">
+    <h1>Math Rush+</h1>
+
+    <div class="status">
+      <p>❤️ Lives: <span id="lives">3</span></p>
+      <p>⏱️ Time: <span id="timer">10</span>s</p>
+      <p>💯 Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <!-- Soal dan Jawaban -->
+    <div class="question-box">
+      <h2 id="question">Loading...</h2>
+      <input type="number" id="answer" placeholder="Jawaban kamu..." />
+      <button id="submit">Submit</button>
+    </div>
+
+    <p id="message"></p>
+    <div id="score-popup">+10</div>
+  </div>
+
+  <!-- 🏆 Leaderboard -->
+  <div class="leaderboard-container">
+    <h2>🏆 Leaderboard</h2>
+    <table id="leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Nama</th>
+          <th>Skor</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Tombol Reset -->
+    <button id="reset-leaderboard" class="reset-btn">Reset Leaderboard</button>
+  </div>
+
+  <!-- ✏️ Popup Input Nama -->
+  <div id="name-popup" class="popup-overlay">
+    <div class="popup-box">
+      <h3>Masukkan Nama Kamu</h3>
+      <input type="text" id="player-name" placeholder="Nama kamu..." />
+      <button id="save-name">Simpan</button>
+    </div>
+  </div>
+  
+  <!-- 🗑️ Popup Reset Leaderboard -->
+<div id="reset-popup" class="popup-overlay">
+  <div class="popup-box">
+    <h3>Yakin mau hapus semua data leaderboard?</h3>
+    <div class="popup-buttons">
+      <button id="confirm-reset">Ya</button>
+      <button id="cancel-reset" class="cancel-btn">Batal</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" src="assets/sounds/bgmusic.mp3" loop></audio>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
